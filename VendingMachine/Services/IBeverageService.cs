@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using VendingMachine.DTO;
 namespace VendingMachine.Services
 {
-    interface IBeverageService
+    public interface IBeverageService
     {
         IEnumerable<BeverageListDto> GetAll();
         IEnumerable<BeverageRecipeDto> GetRecipe(int id);

@@ -8,7 +8,17 @@ namespace VendingMachine.Controllers
 {
     public class HomeController : Controller
     {
-        BeverageService _beverageService = new BeverageService();
+        IBeverageService _beverageService;
+        public HomeController(IBeverageService beverageService)
+        {
+            _beverageService = beverageService;
+        }
+
+        public HomeController()
+        {
+            _beverageService = new BeverageService();
+        }
+
         public ActionResult Index()
         {
             return View();
