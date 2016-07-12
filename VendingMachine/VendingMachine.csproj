@@ -121,6 +121,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\VendingMacineContext.cs" />
+    <Compile Include="DTO\BeverageListDto.cs" />
+    <Compile Include="DTO\BeverageRecipeDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -16,14 +16,14 @@ namespace VendingMachine.Controllers
 
         public ActionResult GetAll()
         {
-            var beverages = _beverageService.GetAll().Select(x=>new{Name =x.Name , Id=x.Id});
+            var beverages = _beverageService.GetAll();
             return Json(new { beverages = beverages }, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
         public ActionResult GetRecipe(int id)
         {
-            var recipe = _beverageService.GetRecipe(id).Select(x => new { Title = x.Title });
+            var recipe = _beverageService.GetRecipe(id);
             return Json(new { recipe = recipe }, JsonRequestBehavior.AllowGet);
         }
     }
