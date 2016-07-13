@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    var URL = 'GetAll';
+    var URL = $('#get_all_url').data('request-url');
     $.ajax({
         type: "Get",
         url: URL,
@@ -28,7 +28,7 @@ function handleEvents() {
         item.preventDefault();
         var selectedID = this.id;
         var selectedText = this.text;
-        var URL = 'GetRecipe';
+        var URL = $('#get_recipe_url').data('request-url');
         $.ajax({
             type: "POST",
             url: URL,

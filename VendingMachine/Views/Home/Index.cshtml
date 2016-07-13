@@ -3,6 +3,8 @@
 }
 
 <div class="container">
+    <input id="get_all_url" data-request-url="@Url.Action("GetAll", "Home")" type="hidden"/>
+    <input id="get_recipe_url" data-request-url="@Url.Action("GetRecipe", "Home")" type="hidden" />
     <div class="row">
         <ul id="beverage-menu" class="nav navbar-nav beverage-menu"> </ul>
     </div>  
